@@ -75,9 +75,10 @@ namespace EncapsulationBankAccount.Entities
 
         public void Withdraw(decimal amount)
         {
-            if (amount < 0 || amount > 25000)
+            var validateResult = ValidateAmount(amount);
+            if (!validateResult.isValid)
             {
-                throw new ArgumentException("Amount that is getting withdraw is more that 25000 or less than 0");
+                throw new ArgumentException(validateResult.errorMsg);
             }
             else
             {
@@ -87,9 +88,10 @@ namespace EncapsulationBankAccount.Entities
 
         public void Deposit(decimal amount)
         {
-            if (amount < 0 || amount > 25000)
+            var validateResult = ValidateAmount(amount);
+            if (!validateResult.isValid)
             {
-                throw new ArgumentException("Amount that is getting deposited is more that 25000 or less than 0");
+                throw new ArgumentException(validateResult.errorMsg);
             }
             else
             {
@@ -97,7 +99,17 @@ namespace EncapsulationBankAccount.Entities
             }
         }
 
-
+        public static (bool isValid, string errorMsg) ValidateAmount(decimal amount)
+        {
+            if (amount < 0 || amount > 25000)
+            {
+                return (false, "Amount that is getting deposited is more that 25000 or less than 0");
+            }
+            else
+            {
+                return (true, "Amount is valid");
+            }
+        }
         public int GetDaysSinceCreation()
         {
             return (DateTime.Today - Created.Date).Days;
