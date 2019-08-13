@@ -28,17 +28,17 @@ namespace EncapsulationBankAccount.Entities
 
         public void Withdraw(decimal amount)
         {
-            throw NotImplementedException;
+            Balance -= amount;
         }
 
         public void Deposit(decimal amount)
         {
-            throw NotImplementedException;
+            Balance += amount;
         }
 
         public int GetDaysSinceCreation()
         {
-            throw NotImplementedException;
+            return (DateTime.Today - Created.Date).Days;
         }
     }
 }
