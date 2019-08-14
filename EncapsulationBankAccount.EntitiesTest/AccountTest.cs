@@ -46,13 +46,63 @@ namespace EncapsulationBankAccount.EntitiesTest
         }
 
         [Fact]
-        public void IsfalseifBalanceIsOutsideGivenInterval()
+        public void IsfalseIfBalanceIsOutsideGivenInterval()
         {
             //Arrange
+            var validResult = Account.ValidateBalance(1100000000);
 
             //Act
 
             //Assert
+            Assert.False(validResult.isValid);
         }
+
+        [Fact]
+        public void IsTrueIfBalanceIsWithinGivenInterval()
+        {
+            //Arrange
+            var validResult = Account.ValidateBalance(5000000);
+
+            //Act
+
+            //Assert
+            Assert.True(validResult.isValid);
+        }
+
+        [Fact]
+        public void IsFalseIfWithdrawOrDepositIsHigherOrLowerThanGivenInterval()
+        {
+            //Arrange
+            var validResult = Account.ValidateAmount(30000);
+            //Act
+
+            //Assert
+            Assert.False(validResult.isValid);
+        }
+
+        [Fact]
+        public void IsTrueIfWithdrawOrDepositIsWithinGivenInterval()
+        {
+            //Arrange
+            var validResult = Account.ValidateAmount(15000);
+            //Act
+
+            //Assert
+            Assert.True(validResult.isValid);
+        }
+
+        [Fact]
+        public void GetDaysSinceCreation_ReturnsTrueIfResultIsEqualToGivenNumberInAssert()
+        {
+            //Arrange
+            Account account = new Account(30000);
+
+            //Act
+            int actualDaysSinceCreation = account.GetDaysSinceCreation();
+
+            //Assert
+            Assert.True(actualDaysSinceCreation == 0);
+        }
+
     }
 }
