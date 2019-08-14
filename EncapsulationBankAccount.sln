@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulationBankAccount.Entities", "EncapsulationBankAccount.Entities\EncapsulationBankAccount.Entities.csproj", "{32AEA841-A0B1-4A66-A5E2-F2AD8CB88D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncapsulationBankAccount.Entities", "EncapsulationBankAccount.Entities\EncapsulationBankAccount.Entities.csproj", "{32AEA841-A0B1-4A66-A5E2-F2AD8CB88D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulationBankAccount.EntitiesTest", "EncapsulationBankAccount.EntitiesTest\EncapsulationBankAccount.EntitiesTest.csproj", "{DAEED62B-756A-423B-B348-C09B8895D68B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncapsulationBankAccount.EntitiesTest", "EncapsulationBankAccount.EntitiesTest\EncapsulationBankAccount.EntitiesTest.csproj", "{DAEED62B-756A-423B-B348-C09B8895D68B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulationBankAccount.Dal", "EncapsulationBankAccount.Dal\EncapsulationBankAccount.Dal.csproj", "{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DAEED62B-756A-423B-B348-C09B8895D68B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEED62B-756A-423B-B348-C09B8895D68B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEED62B-756A-423B-B348-C09B8895D68B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

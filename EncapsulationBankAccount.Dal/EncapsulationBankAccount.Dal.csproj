@@ -8,4 +8,8 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EncapsulationBankAccount.Entities\EncapsulationBankAccount.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

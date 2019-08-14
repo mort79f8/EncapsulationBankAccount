@@ -80,13 +80,21 @@ namespace EncapsulationBankAccount.Entities
             Balance = initalBalance;
             Created = DateTime.Today;
         }
+
+        /// <summary>
+        /// Empty Constructor.
+        /// </summary>
+        public Account()
+        {
+
+        }
         #endregion
 
         /// <summary>
         /// Validate that the balance is within the given interval.
         /// </summary>
         /// <param name="balance">the value to be validated</param>
-        /// <returns>A <see cref="(bool, string)"/> tuple, indicating te result of the validation</returns>
+        /// <returns>A <see cref="(bool, string)"/> tuple, indicating the result of the validation</returns>
         public static (bool isValid, string errorMessage) ValidateBalance(decimal balance)
         {
             if (balance < -999999999 || balance > 999999999)
