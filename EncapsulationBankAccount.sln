@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncapsulationBankAccount.En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulationBankAccount.Dal", "EncapsulationBankAccount.Dal\EncapsulationBankAccount.Dal.csproj", "{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulationBankAccount.DalTest", "EncapsulationBankAccount.DalTest\EncapsulationBankAccount.DalTest.csproj", "{61DB3046-8A50-4A47-9AD6-FE418AD89391}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0593130E-2933-4A37-8BDC-A8AC4E5B1C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DB3046-8A50-4A47-9AD6-FE418AD89391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DB3046-8A50-4A47-9AD6-FE418AD89391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DB3046-8A50-4A47-9AD6-FE418AD89391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DB3046-8A50-4A47-9AD6-FE418AD89391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
