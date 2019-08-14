@@ -45,7 +45,7 @@ namespace EncapsulationBankAccount.Dal
         /// <returns>Affected rows</returns>
         public int Insert(Account account)
         {
-            string sql = $"INSERT INTO Accounts VALUES ('{account.Balance}', '{account.Created.Date:yyyy-MM-dd}')";
+            string sql = $"INSERT INTO Accounts VALUES ({account.Balance}, '{account.Created.Date:yyyy-MM-dd}')";
             return ExecuteNonQuery(sql);
         }
 
@@ -57,6 +57,17 @@ namespace EncapsulationBankAccount.Dal
         public int Delete(int accountId)
         {
             string sql = $"DELETE FROM Accounts WHERE Id={accountId}";
+            return ExecuteNonQuery(sql);
+        }
+
+        /// <summary>
+        /// Updates an account
+        /// </summary>
+        /// <param name="account">account that is being updated</param>
+        /// <returns>Affected rows</returns>
+        public int Update(Account account)
+        {
+            string sql = $"UPDATE Accounts SET Balance={account.Balance} WHERE Id={account.Id}";
             return ExecuteNonQuery(sql);
         }
     
